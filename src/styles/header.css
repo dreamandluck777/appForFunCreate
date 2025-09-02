@@ -1,0 +1,27 @@
+:root {
+  --bg-header-dark : #252525;
+  --bg-header-light: #eeeeee;
+}
+
+.divContChangeLang {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.headerWrapperMain {
+  display: flex;
+  width: clamp(150px, 30vw, 300px);
+  align-items: center;
+}
+
+.headerWrapperMain[data-theme = 'light'] {
+  background-color: var(--bg-header-light);
+  transition: background-color .3s ease-in-out;
+}
+
+.headerWrapperMain[data-theme = 'dark'] {
+  background-color: var(--bg-header-dark);
+  transition: background-color .3s ease-in-out;
+}

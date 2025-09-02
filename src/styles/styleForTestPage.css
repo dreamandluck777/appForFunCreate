@@ -1,0 +1,160 @@
+:root {
+
+  --button-bg-light: #007aff;
+  --button-bg-dark: #2196f3;
+
+  --button-text-light: #ffffff;
+  --button-text-dark: #ffffff;
+
+  --button-border-light: #005fcc;   
+  --button-border-dark: #64b5f6; 
+
+  --box-shadow-dark: rgba(255, 255, 255, 0.05);
+  --box-shadow-light: rgba(0, 0, 0, 0.1); 
+
+    --border-color: #B0B0B0;
+    --button-bg: #4A90E2; 
+    --button-text-color: #FFFFFF;
+}
+
+.divWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    min-height: 100vh;
+}
+.divWrapper main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divWrapper main > section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+section.dark {
+   box-shadow: 0 4px 12px var(--box-shadow-dark);
+}
+
+section.light {
+    box-shadow: 0 4px 12px var(--box-shadow-light);
+}
+
+section h1:first-child {
+    text-decoration: underline;
+    text-align: center;
+}
+
+section button:last-child {
+    cursor: pointer;
+    border-radius: 7px;
+    height: clamp(25px, 5vw, 35px);
+    font-size: clamp(14px, 1.5vw, 18px);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+section button:last-child.dark {
+background-color: var(--button-bg-dark);
+color: var(--button-text-dark);
+border-color: var(--button-border-dark);
+}
+
+section button:last-child.light{
+background-color: var(--button-bg-light);
+color: var(--button-text-light);
+border-color: var(--button-border-light);
+}
+
+@media (any-hover: hover) {
+    section button:last-child:hover.light {
+        background-color: #005fcc;   
+        border-color: #004bb5;       
+    }
+    section button:last-child:hover.dark {
+        background-color: #64b5f6;   
+        border-color: #90caf9;
+        color: #1e1e1e;     
+    }
+}
+
+ .divWrapperForQuestions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main > .divTestOption {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: box-shadow .3s ease-in-out;
+}
+
+
+
+.divTestOption > div:nth-of-type(2) {
+   display: flex;
+   justify-content: center;
+   gap: 5px;
+}
+
+.divTestOption > div:nth-of-type(2) button, .divTestOption > div:nth-of-type(3) button {
+  padding: clamp(8px, 1.5vw, 12px) clamp(12px, 3vw, 20px);
+  border: none;
+  border-radius: 6px;
+  font-size: clamp(12px, 1.2vw, 16px);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+  background-color: #4a90e2;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media(any-hover: hover) {
+.divTestOption > div:nth-of-type(2) button:hover, .divTestOption > div:nth-of-type(3) button:hover {
+  background-color: #357ABD; 
+}
+
+.divTestOption > div:nth-of-type(2) button:active, .divTestOption > div:nth-of-type(3) button:active {
+  background-color: #2c5f99;
+}
+}
+
+.divTestOption > div:nth-of-type(2) button:disabled {
+  opacity: 0.5;
+}
+
+
+.divTestOption > div:nth-of-type(3) {
+    align-self: center;
+} 
+
+.divWrapperForQuestions > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.divWrapperForQuestions > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.divWrapperForQuestions > div > div > p {
+    border-bottom: 3px solid blue;
+    text-align: center;
+}
+
+.divWrapperForQuestions > h2 {
+    text-align: center;
+}

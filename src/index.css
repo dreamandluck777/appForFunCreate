@@ -1,0 +1,86 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+:root {
+  --fs-p: clamp(1.4rem, 1.2rem + 0.5vw, 1.6rem);
+  --fs-h1: clamp(3.6rem, 2.8rem + 2vw, 5.2rem);
+  --fs-h2: clamp(3rem, 2.4rem + 1.5vw, 4.2rem);
+  --fs-h3: clamp(2.4rem, 2rem + 1vw, 3.2rem);
+  --fs-h4: clamp(2rem, 1.6rem + 0.8vw, 2.6rem);
+  --fs-h5: clamp(1.6rem, 1.4rem + 0.5vw, 2rem);
+  --fs-h6: clamp(1.4rem, 1.2rem + 0.3vw, 1.6rem);
+  --fs-li: clamp(1.4rem, 1.2rem + 0.5vw, 1.6rem);
+  --bg-color-dark: #1e1e1e;
+  --bg-color-light: #f5f5f5;
+  --color-text-dark: #FFFFFF;
+  --color-text-light: #222222;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+
+p {
+  font-size: var(--fs-p);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+h5 {
+  font-size: var(--fs-h5);
+}
+
+h6 {
+  font-size: var(--fs-h6);
+}
+
+li {
+  font-size: var(--fs-li);
+}
+
+span {
+  font-size: var(--fs-p);
+}
+
+html[data-theme='dark'] {
+  background-color: var(--bg-color-dark);
+     transition: background-color .3s ease-in-out;
+}
+
+html[data-theme='light'] {
+  background-color: var(--bg-color-light);
+     transition: background-color .3s ease-in-out;
+}
+
+[data-theme = 'dark'] {
+  color: var(--color-text-dark);
+  transition: background-color .3s ease-in-out;
+}
+
+[data-theme = 'light'] {
+  color: var(--color-text-light);
+  transition: background-color .3s ease-in-out;
+}
+
+
+

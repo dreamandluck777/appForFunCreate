@@ -1,0 +1,85 @@
+:root {
+  --border-color-dark: rgb(85, 85, 139);
+  --border-color-light: rgb(13, 13, 17);
+  --bg-content-dark: #252525;
+  --bg-content-light: #eeeeee;
+  --color-link-dark : #fff;
+  --color-link-light: rgb(85, 85, 139);
+}
+
+
+.divWrapperForBlocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(15px, 5vw, 40px);
+  height: 100vh;
+  background: url('/backgroundMain.png') no-repeat center/cover;
+}
+
+.mainWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.divWrapperForContent {
+  transition:  background-color 0.3s ease-in-out;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.divWrapperForContent > section {
+    display: flex;
+    flex-direction: column;
+     gap: clamp(15px, 5vw, 40px);
+     align-items: center;
+}
+
+
+
+.divWrapperForContent > section > h1 {
+    text-align: center;
+    text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+.forLink {
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+    font-size: clamp(14px, 2vw, 18px);
+    cursor: pointer;
+}
+
+.forLink.dark {
+    color: var(--color-link-dark);
+}
+
+.forLink.light {
+    color: var(--color-link-light);
+}
+
+@media(any-hover: hover) {
+    .forLink:hover {
+      text-decoration: underline;
+    }
+}
+
+.divWrapperForContent > section > p:first-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.divWrapperForContent.dark {
+  background-color: var(--bg-content-dark);
+}
+
+.divWrapperForContent.light {
+  background-color: var(--bg-content-light);
+}
+
+

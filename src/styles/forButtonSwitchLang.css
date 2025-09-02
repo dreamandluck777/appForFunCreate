@@ -1,0 +1,23 @@
+:root {
+    --border-color: #B0B0B0;
+    --button-bg: #4A90E2; 
+    --button-text-color: #FFFFFF;
+}
+
+.buttonInHeader {
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  cursor: pointer;
+  position: relative;
+  border: 1px solid black;
+  width: clamp(40px, 5vw, 60px);
+  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+}
+
+.buttonInHeader.noneActive::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--border-color);
+}
+
